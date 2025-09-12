@@ -59,4 +59,18 @@ public class ProductList {
             currentNode = currentNode.next;
         }
     }
+
+    public void deleteLast(){
+        if (head == null) {
+            System.out.println("Null");
+        }else if(head.next == null){
+            head = null;
+        }else{
+            Node currentNode = head;
+            while (currentNode.next.next != null) {
+                currentNode = currentNode.next;
+            }
+            currentNode.next = null;
+        }
+    }
 }
