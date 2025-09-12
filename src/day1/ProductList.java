@@ -47,4 +47,16 @@ public class ProductList {
             head = newNode;
         }
     }
+
+    public void addAfter(int id, Product  product) {
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            if(currentNode.data.getId() == id) {
+                Node newNode = new Node(product);
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+            }
+            currentNode = currentNode.next;
+        }
+    }
 }

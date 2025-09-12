@@ -12,6 +12,8 @@ public class Main {
         list.addProduct(new Product(1,"Trần Việt Đức", 1, 1, "S88"));
         list.addProduct(new Product(1,"Trần Việt", 1, 1, "S87"));
         list.addProduct(new Product(1,"Vịt Đực", 1, 1, "S87"));
+        Product product = new Product(1,"Vịt", 1, 1, "S87");
+        list.addAfter(2,product);
         list.display();
 //        list.searchBrand("S87");
     }
