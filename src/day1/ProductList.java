@@ -37,4 +37,14 @@ public class ProductList {
             currentNode = currentNode.next;
         }
     }
+
+    public void addFirst(Product product) {
+        Node newNode = new Node(product);
+        if (head == null) {
+            head = newNode;
+        }else{
+            newNode.next = head;
+            head = newNode;
+        }
+    }
 }
