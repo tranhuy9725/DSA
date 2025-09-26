@@ -95,32 +95,18 @@ public class StudentList {
     }
 
     public void removeById(String id){
-        if (head == null) {
-            System.out.println("List is empty!");
-            return;
-        }
-
-        if (head.data.getId().equals(id)) {
-            System.out.println("Deleted: " + head.data);
-            head = head.next;
-            return;
-        }
 
         Node currentNode = head;
-        Node prev = null;
-
-        while (currentNode != null && !currentNode.data.getId().equals(id)) {
-            prev = currentNode;
+        if(head.data.getId().equals(id)){
+            head = head.next;
+        }
+        while (currentNode.next != null){
+            if(currentNode.next.data.getId().equals(id)){
+                currentNode.next = currentNode.next.next;
+            }
             currentNode = currentNode.next;
         }
 
-        if (currentNode == null) {
-            System.out.println("Student with id " + id + " not found!");
-            return;
-        }
-
-        System.out.println("Deleted: " + currentNode.data);
-        prev.next = currentNode.next;
     }
 
     public void countStudentList(){
@@ -180,7 +166,6 @@ public class StudentList {
                 }
             }
         }
-        System.out.println("Sorted student list by GPA (descending):");
         display();
     }
 

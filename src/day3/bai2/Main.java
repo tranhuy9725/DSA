@@ -27,7 +27,7 @@ public class Main {
         studentList.removeById("B00");
         studentList.display();
 //        studentList.countStudentList();
-        System.out.println();
-        studentList.sortByGpaDesc();
+//        System.out.println();
+//        studentList.sortByGpaDesc();
     }
 }
