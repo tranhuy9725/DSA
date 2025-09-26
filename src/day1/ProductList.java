@@ -73,4 +73,16 @@ public class ProductList {
             currentNode.next = null;
         }
     }
+
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println("Null");
+        }else if(head.next == null){
+            head = null;
+        }else{
+            head = head.next;
+        }
+    }
+
+    public void deleteProduct(int id){}
 }
