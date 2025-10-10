@@ -1,6 +1,7 @@
 package day7.Stack.Bai1;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,13 +17,18 @@ public class Main {
         }
 
         LinkedStack linkedStack = new LinkedStack();
+
+        Stack<Integer> stack = new Stack<>();
+
         for (int i = 0; i < arr.length; i++) {
             linkedStack.push(arr[i]);
+            stack.push(arr[i]);
         }
 
         System.out.println("Dãy số đảo ngược:");
         while (!linkedStack.isEmpty()) {
             linkedStack.pop();
+            System.out.println(stack.pop());
         }
     }
 }

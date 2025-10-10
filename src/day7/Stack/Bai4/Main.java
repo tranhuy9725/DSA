@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        TextEditor editor = new TextEditor();
+        UseStack4 editor = new UseStack4();
 
         while (true) {
             editor.show();

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        BrowserHistory browser = new BrowserHistory("google.com");
+        UseStack browser = new UseStack("google.com");
         while (true) {
             System.out.println("\nTrang hiện tại: " + browser.getCurrentPage());
             System.out.println("Chọn thao tác:");
