@@ -96,8 +96,11 @@ public class DoublyLinkedList {
                         Node nextNode = currentNode.next;
                         prevNode.next = nextNode;
                         nextNode.prev = prevNode;
+
                     }
+                    return;
                 }
+                currentNode = currentNode.next;
             }
         }
     }
