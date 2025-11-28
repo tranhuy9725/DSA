@@ -1,4 +1,5 @@
-package day7.Stack.Bai4;
+package p4;
+
 
 import java.util.Scanner;
 
@@ -9,20 +10,20 @@ public class Main {
 
         while (true) {
             editor.show();
-            System.out.println("\nChọn thao tác:");
+            System.out.println("\nSelect action:");
             System.out.println("1. Insert");
             System.out.println("2. Delete last character");
             System.out.println("3. Replace");
             System.out.println("4. Undo");
             System.out.println("5. Redo");
-            System.out.println("6. Thoát");
+            System.out.println("6. Exit");
             System.out.print("=> ");
             int choice = sc.nextInt();
             sc.nextLine(); // bỏ newline
 
             switch (choice) {
                 case 1:
-                    System.out.print("Nhập chuỗi để thêm: ");
+                    System.out.print("Enter string to add:");
                     String str = sc.nextLine();
                     editor.insert(str);
                     break;
@@ -30,7 +31,7 @@ public class Main {
                     editor.deleteLast();
                     break;
                 case 3:
-                    System.out.print("Nhập chuỗi thay thế: ");
+                    System.out.print("Enter the replacement string:");
                     String rep = sc.nextLine();
                     editor.replace(rep);
                     break;
@@ -41,10 +42,10 @@ public class Main {
                     editor.redo();
                     break;
                 case 6:
-                    System.out.println("Kết thúc!");
+                    System.out.println("End!");
                     return;
                 default:
-                    System.out.println("Lựa chọn không hợp lệ!");
+                    System.out.println("Invalid selection!");
             }
         }
     }

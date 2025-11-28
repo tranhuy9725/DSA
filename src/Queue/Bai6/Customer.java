@@ -3,7 +3,7 @@ package Queue.Bai6;
 public class Customer {
     private int id;
     private String name;
-    private String transactionType; // "withdraw" hoặc "deposit"
+    private String transactionType;
     private double amount;
 
     public Customer(int id, String name, String transactionType, double amount) {
